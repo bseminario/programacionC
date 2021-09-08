@@ -2,7 +2,9 @@
 
 int main()
 {
+	int varx;
+	printf("dsdsdfdf");
 
 
-  return 0;
+	return 0;
  }
