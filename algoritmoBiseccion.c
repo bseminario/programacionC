@@ -7,19 +7,25 @@ double f(double x){
 
 void main()
 {
-    float a=3,b=4;
-    printf("%f|%f\n",f(a),f(b));
-    float m=(a+b)/2;
-    if(f(a)*f(m)<0)
+    float a=3,b=4,m=(a+b)/2;
+    printf("a       |b       |f(b)       |f(a)     |m     \n");
+    printf("%f|%f|%f|%f|%f\n",a,b,f(a),f(b),m);
+    int k,iteraciones=3;
+    for ( k = 0; k<iteraciones; k++)
     {
-        m=(a+m)/2;
-        b=m;
-    }else{
-        m=(b+m)/2;
-        a=m;
-        printf("%f",a);
+        m=(a+b)/2;
+        if(f(a)*f(m)<0)
+        {
+            b=m;
+            m=(a+m)/2;
+            
+        }else
+        {
+            a=m;
+            m=(b+m)/2;
+            
+        }
+        printf("%f|%f|%f|%f|%f\n",a,b,f(a),f(b),m);
     }
-    printf("%f",m);
-    
-
 }
+// https://www.programiz.com/c-programming/online-compiler/
